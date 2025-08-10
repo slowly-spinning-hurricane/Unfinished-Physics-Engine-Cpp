@@ -2,7 +2,7 @@
 
 #ifndef __vec2_h
 #   define __vec2_h 1
-#include <math.h> // sin, cos, sqrt, pow, atan2
+#include <math.h> // sin, cos, tan, sqrt, pow, atan2
 
 typedef struct {
     float x, y;
