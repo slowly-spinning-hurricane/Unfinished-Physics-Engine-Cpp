@@ -1,3 +1,5 @@
+/* INCOMPLETE as of 10 August 2025 */
+
 #ifndef __vec2_h
 #   define __vec2_h 1
 #include <math.h> // sin, cos, sqrt, pow, atan2
