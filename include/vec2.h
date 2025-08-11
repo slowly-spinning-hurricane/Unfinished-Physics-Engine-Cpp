@@ -37,7 +37,7 @@ float dot(vec2 v1, vec2 v2) {
     return v1.x * v2.x + v1.y * v2.y;
 }
 
-vec2 conj(vec2 v) {
+vec2 conjugate(vec2 v) {
     return (vec2) {
         .x = v.x,
         .y = -v.y
@@ -57,7 +57,7 @@ float modulus(vec2 v) {
 
 vec2 unit_vector(vec2 v) {
     float v_mod = modulus(v);
-    return (v_mod > 0) ? multiply(v, 1.0f / v_mod): 0;
+    return (v_mod > 0) ? multiply(v, 1.0f / v_mod): (vec2) {.x = 0, .y = 0};
 }
 
 float arg(vec2 v) {
