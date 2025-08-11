@@ -27,7 +27,7 @@ vec2 inverse(vec2 v) {
 } // additive inverse of v.
 
 vec2 relative(vec2 v1, vec2 v2) {
-    return v2.sum(inverse(v1)); // v2 - v1; v2 relative to v1
+    return sum(v2, inverse(v1)); // v2 - v1; v2 relative to v1
 }
 
 vec2 multiply(vec2 v, float f) {
