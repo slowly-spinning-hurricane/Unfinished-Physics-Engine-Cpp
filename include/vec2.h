@@ -8,6 +8,10 @@ typedef struct {
     float x, y;
 } vec2;
 
+typedef struct {
+    vec2 init, vec2 fini;
+} line;
+
 vec2 sum(vec2 v1, vec2 v2) {
     return (vec2) {
         .x = v1.x + v2.x, 
@@ -68,4 +72,17 @@ float slope(vec2 v) {
     return tan(arg(v));
 }
 
+void print_line(line L) {
+    printf("Initial: (%f, %f)\nFinal: (%f, %f)",
+            L.init.x, L.init.y, L.fini.x, L.fini.y);
+    return;
+}
+
+float gradient(line L) {
+    return (L.fini.x == L.init.x) ? 0.0 : slope(relative(L.fini, L.init));
+    // return a default slope of 0 to avert a zero-divisor disaster
+}
+
 #endif /* vec2.h */
+
+
